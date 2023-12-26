@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <!--외부 스타일 적용-->
+  <link rel="stylesheet" href="../css/public.css">
+
+  <style>
+    body * {
+      box-sizing: border-box;
+    }
+    ul,li {
+      border: 1px solid red;
+    }
+    li {
+      border-style: double;
+      border-color: green;
+      border-right : none;
+      margin: 2px;
+    }
+    div {
+      border-style: solid;
+      border-color: magenta;
+      margin: 3px;
+      padding: 3px;
+      width: 25%;
+      float: left;
+    }
+    #u1 {
+      list-style-type: armenian;
+    }
+    #u2 {
+      list-style-type: circle;
+      list-style-position: inside;
+    }
+    #u3 {
+      list-style-image: url("../icon.svg");
+    }
+    #u4 {
+      list-style-type: square;
+    }
+
+    .uu {
+      overflow: auto;
+
+    }
+
+
+  </style>
+</head>
+<body>
+<!--외부 스타일 적용-->
+<pre>
+  외부 스타일 적용
+  <link rel="stylesheet" href="../css/public.css">
+</pre>
+<div>
+<h4>disc</h4>
+<ul id="u1" class="uu">
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JAVASCRIPT</li>
+  <li>JQUERY</li>
+</ul>
+</div>
+
+<div>
+<h4>circle</h4>
+<ul id="u2" class="uu">
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JAVASCRIPT</li>
+  <li>JQUERY</li>
+</ul>
+</div>
+<div>
+<h4>image</h4>
+<ul id="u3" class="uu">
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JAVASCRIPT</li>
+  <li>JQUERY</li>
+</ul>
+</div>
+<div>
+<h4>image</h4>
+<ul id="u4" class="uu">
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JAVASCRIPT</li>
+  <li>JQUERY</li>
+</ul>
+</div>
+</body>
+</html>

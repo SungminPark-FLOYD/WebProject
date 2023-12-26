@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        label.lab {
+            display: inline-block;
+            width:  80px;
+            height: 30px;
+        }
+        #text {
+            vertical-align: top;
+        }
+        option {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+<form action="./입력3.jsp" method="post">
+    <label class="lab">아이디</label>
+<!--    text타입 생략 가능    -->
+    <input name="id"  value="a001" placeholder="영어,숫자 조합 10자리로 입력" pattern="[a-z][a-zA-Z0-9]{3,9}"><br>
+
+    <label class="lab">이름</label>
+    <!--    text타입 생략 가능    -->
+    <!--    required -> 입력안하면 안넘어감  -->
+    <!--    pattern 정규식 지정 -> 형식을 검사한다  -->
+    <input name="name" title="홍길동" autofocus required="required"><br>
+
+    <label class="lab">전화번호</label>
+    <input type="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"><br>
+    <!--    정규식 1글자 이상은 +로 표시 입력이 없어도 상관 없으면 *로 표시-->
+    <!--    email 형식 : [a-zA-z0-9]+@([a-zA-z]+[0-9]*(\.[a-zA-Z]+{1,2}   -->
+    <label class="lab">이메일</label>
+    <input type="text" pattern="[a-zA-z0-9]+@([a-zA-z]+[0-9]*)(\.[a-zA-Z]+){1,2}"><br>
+
+    <label class="lab">제목</label>
+    <input name="title" type="text" placeholder="제목입력" title="제목"><br>
+
+    <label id="text" class="lab">내용</label>
+    <textarea name="area" rows="5" cols="50"></textarea><br>
+
+    <label class="lab">자동차</label>
+    <select name="cars1">
+        <option>BMW</option>
+        <option selected="selected">Benz</option>
+        <option>Hyundai</option>
+        <option>KIA</option>
+    </select>
+    <br><br><br><br>
+
+<!--    selected두개 부여 하면 마지막 selected가 선택됨 -> multiple로 다중선택-->
+    <label class="lab">자동차</label>
+    <select name="cars2" multiple>
+        <option>BMW</option>
+        <option selected="selected">Benz</option>
+        <option>Hyundai</option>
+        <option selected="selected">KIA</option>
+    </select>
+
+    <br>
+    <input type="submit" value="전송">
+    <input type="reset">
+    <button type="submit">전송</button>
+    <button type="reset">취소</button>
+    <input type="image" src="../images/check.png" alt="check.png">
+    <!--    button에서 타입을 생략하면 전송 기능    -->
+    <button>전송</button>
+</form>
+</body>
+</html>

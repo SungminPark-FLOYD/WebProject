@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form {
+            background-color: #5aaf55;
+        }
+    </style>
+    <script type="text/javascript">
+        function changeCol() {
+            //html 요소 접근
+            var vcol = document.getElementById('col');
+            //값 가져오기
+            var cvalue = vcol.value;
+            console.log(cvalue);
+            //출력 요소 접근
+            var vform = document.querySelector('#frm');
+            vform.style.backgroundColor = cvalue;
+
+        }
+    </script>
+</head>
+<body>
+<form id="frm" action="./type.jsp" method="post" >
+    <label for="name">이름</label>
+    <input type="text" name="name" id="name"><br>
+    <label for="email">이메일</label>
+    <input type="email" name="email" id="email"><br>
+    <label for="tel">전화번호</label>
+    <input type="tel" name="tel" id="tel"><br>
+    <label for="bir">생일</label>
+    <input type="date" name="bir" id="bir"><br>
+    <br>
+
+    <label for="col">색상변경</label>
+    <input type="color" name="col" id="col" onchange="changeCol()"><br>
+
+    <input type="image" src="../img/git.png" alt="git.png">
+
+
+    <input type="submit">
+    <input type="reset">
+
+    <br><br>
+    <button type="submit">전송</button>
+    <button type="reset">초기화</button>
+    <button type="button">확인</button>
+</form>
+
+</body>
+</html>

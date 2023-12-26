@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML,CSS,JAVASCRIPT</title>
+  <style>
+    body * { } /*후손까지 전부 선택*/
+    body > * { } /* 자식만 선택 */
+    h1 {
+      border: 3px double rgb(200,250,124);
+      border-left: none;
+      border-right: none;
+    }
+    h2 {
+      border : 3px solid #5aaf55;
+    }
+    p {
+      border: 3px solid #a6aa55;
+    }
+    pre {
+      background-color: skyblue;
+      font-size: large;
+      font-palette: initial;
+    }
+
+    span {
+      background-color: lawngreen;
+      font-size: 2.0em;
+    }
+  </style>
+</head>
+<body>
+<pre>
+  인라인 요소 : 글자길이만큼만 차지한다, 줄이 바뀌지 않는다
+  b, i, em, sup, sub, mark, span, a
+
+  블럭요소 : 한줄 전체를 차지하여 줄 끝에서 자동으로 줄이 바뀐다.
+  div, p, h1~h6
+
+  글자 크기 단위 : px , % , em(16px)기준 - 부모기준, rem - body16px기준
+</pre>
+<h1> WEB 기초</h1>
+<h2>HTML</h2>
+<p>문서의 구조 정의</p>
+<h2>CSS</h2>
+<p>문서의 <span>스타일</span> 정의</p>
+<h2>JAVASCRIPT</h2>
+<p>문서의 동작 정의</p>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    body * {
+      box-sizing:  border-box;
+    }
+    div {
+      border: 1px solid brown;
+      width: 90%;
+      height: 100px;
+      margin: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    span {
+      background-color: green;
+      width: 150px;
+      height: 50px;
+      display: inline-block;
+    }
+    #d1 {
+      margin: 5px;
+      padding: 5px;
+      border: 2px dotted orange;
+      height:  300px;
+    }
+    .in {
+      border: 1px solid gray;
+      height: 80%;
+      padding: 3px;
+    }
+    #in1 {
+      width:  calc(20% - 0.5%);
+      float: left;
+      padding:  6px;
+    }
+    #in2 {
+      width: calc(66% - 0.5%);
+      float: right;
+      overflow: auto;
+    }
+    img {
+      width:  99%;
+      height: 99%;
+    }
+    .pri {
+      background-color: yellow;
+      display: inline;
+      width: 500px;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+<div>1<span>aaaaaaaaaaaaa</span></div>
+<div>2<span>bbbbbbbbbbbbb</span></div>
+<div>3<span>ccccccccccccc</span></div>
+<br>
+<hr color="green">
+<br>
+
+<div id="d1">
+  <div id="in1" class="in">
+    <img src="../img/git.png" alt="cat.png">
+  </div>
+
+  <div id="in2" class="in">
+    창업자 톰과 크리스는 <span class="pri">Ruby on Rails</span> 모임을 통해 친구가 된다.
+    둘 다 직장인이었기 때문에 매주 주말에만 만나며 사이드 프로젝트로 서비스를 시작했으나 규모가 커지기 시작하여 또 다른
+    공동창업자 PJ를 불러들여 전업으로 사업을 시작한다. 창업자 셋 다 개발자 출신이다.
+  </div>
+</div>
+</body>
+</html>

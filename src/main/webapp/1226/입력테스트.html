@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <!--    CSS우선순위 inline -> 내부 -> 외부 순으로 실행된다 -->
+    <style>
+        body {
+            min-width: 1000px;
+        }
+        pre {
+            background-color: lightgreen;
+        }
+        form {
+            width: 40%;
+            border: 2px double blue;
+            padding: 20px;
+            margin: 0 auto;
+        }
+        h1 { text-align: center}
+
+        div.parrent {
+            border: 2px solid blue;
+            box-sizing: border-box;
+            width: 400px;
+            height: 300px;
+            margin: 0 auto;
+
+            position: relative;
+
+        }
+
+        .input {
+            position: absolute;
+            top: 10%;
+            height: 10%;
+            width: auto;
+            margin: 10px;
+
+        }
+
+        label.lab {
+            display: inline-block;
+            width:  80px;
+            height: 30px;
+        }
+        #text {
+            vertical-align: top;
+        }
+
+        /*형제 밑에 한명만 적용(~는 형제 다 적용)*/
+        #addr + input {
+            border: 2px solid red;
+        }
+
+    </style>
+</head>
+<body>
+<pre>
+    입력후 전송 하면 ~~.jsp로 전송한다.
+    전송하기 위해서 input 필드에 반드시 name속성이 있어야 한다.
+    title : 마우스를 요소 위에 올려 놓으면 박스 나타남
+    required : 필수항목
+    autofocus : 첫 실행시 자동 커서
+    pattern : 정규식으로 형식제한
+    placeholder : input field에 나타나는 예시, 제목, 내용
+    readonly : 값을 변경할 수 없는 field, 반드시 value속성 설정
+</pre>
+
+<form action="" method="post">
+    <h1>회원가입 화면</h1>
+    <br><br><br>
+    <div class="parrent">
+        <div class="input">
+        <label class="lab">이름</label>
+        <input name="name" id="name" type="text"> <br>
+
+        <label class="lab" id="addr">주소</label>
+        <input name="address" id="address" type="text"> <br>
+
+        <label class="lab">이메일</label>
+        <input name="email" id="email" type="email"> <br>
+
+        <label class="lab">성별</label>
+        <input name="sex" type="radio">Mail
+        <input name="sex" type="radio">Femail<br>
+
+        <label id="text" class="lab">내용</label>
+        <textarea name="area" rows="5" cols="30"></textarea><br>
+        <br>
+        <button class="sub" type="submit">전송</button>
+        <button type="reset">초기화</button>
+        </div>
+    </div>
+</form>
+</body>
+</html>
