@@ -14,6 +14,7 @@
             height:  250px;
             margin: 5px;
             float: left;
+            overflow: auto;
         }
         div#title {
             border: 3px double red;
@@ -67,6 +68,35 @@
         <li><a href="./1222/formButton.html">formButton.html </a> </li>
     </ul>
 </div>
+<div class="dd">
+    <h4>1226</h4>
+    <ul>
+        <li><a href="./1226/form입력3.html">form입력3.html </a> </li>
+        <li><a href="./1226/입력테스트.html">입력테스트.html </a> </li>
 
+    </ul>
+</div>
+<div class="dd">
+    <h4>1227</h4>
+    <ul>
+        <li><a href="./1227/backgroundImage.html">backgroundImage.html </a> </li>
+        <li><a href="./1227/backgroundImage2.html">backgroundImage2.html </a> </li>
+        <li><a href="./1227/boxBorder.html">boxBorder.html </a> </li>
+        <li><a href="./1227/boxModel.html">boxModel.html </a> </li>
+        <li><a href="./1227/fontFamily.html">fontFamily.html </a> </li>
+        <li><a href="./1227/imageSize.html">imageSize.html </a> </li>
+        <li><a href="./1227/가로리스트.html">가로리스트.html </a> </li>
+        <li><a href="./1227/의사클래스구조.html">의사클래스구조.html </a> </li>
+        <li><a href="./1227/의사클래스상태.html">의사클래스상태.html </a> </li>
+    </ul>
+</div>
+<div class="dd">
+    <h4>숙제</h4>
+    <ul>
+        <li><a href="./gugudan/구구단.html">구구단(단입력)</a> </li>
+        <li><a href="./SignUp/회원가입1.html">회원가입.html</a> </li>
+        <li><a href="./gugudan/구구단.jsp">구구단.jsp </a> </li>
+    </ul>
+</div>
 </body>
 </html>
