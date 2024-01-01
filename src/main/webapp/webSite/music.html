@@ -3,8 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        body * {
+            float: left;
+        }
+        img {
+            margin-left: 30px ;
+            width: 200px;
+            height: 200px;
+            align-items: center;
+        }
+        div {
+            width: auto;
+        }
+        div.com {
+            border: 2px solid lightgray;
+            width: 25%;
+            height: 100%;
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+        }
+        .aa{
+            width: 250px;
+            margin: 5px auto;
+        }
+
+    </style>
 </head>
 <body>
-
+<div>
+    <div class="com">
+        <img src="../images/음악1.jpg" alt="음악1.jpg"><br>
+        <p>'JYP 5인조 신인 걸그룹' ITZY, 타이틀곡 '달라달라' 발매!</p>
+        <audio class="aa" src="../multi/old_pop.mp3" autoplay="autoplay" controls="controls"></audio>
+        <br>
+        <input type="button" value="쇼핑카트에 추가하기">
+    </div>
+    <div class="com">
+        <img src="../images/Anne-Marie(앤마리)-2002.jpg" alt="Anne-Marie(앤마리)-2002.jpg">
+       <p>Anne Marie(앤마리) - 2002 <br>
+       Anne Marie~~!!!!</p>
+        <br>
+        <audio class="aa" src="../multi/old_pop.mp3" autoplay="autoplay" controls="controls"></audio>
+        <input type="button" value="쇼핑카트에 추가하기">
+    </div>
+    <div class="com">
+        <img src="../images/소우주.jpg" alt="소우주.jpg">
+       <p>소우주(Mikrokosmos)<br>
+       방탄소년단</p>
+        <br>
+        <audio class="aa" src="../multi/old_pop.mp3" autoplay="autoplay" controls="controls"></audio>
+        <input type="button" value="쇼핑카트에 추가하기">
+    </div>
+</div>
 </body>
 </html>
