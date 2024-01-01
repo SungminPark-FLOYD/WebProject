@@ -2,9 +2,90 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 폼</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        div.parrent {
+            border: 2px dotted blue;
+            box-sizing: border-box;
+            width: 450px;
+            height: 500px;
+            margin: 0 auto;
+
+            position: relative;
+
+        }
+        .form-group {
+            position: absolute;
+            top: 10%;
+            height: 10%;
+            width: auto;
+            margin: 10px;
+        }
+        label {
+            display: inline-block;
+            margin-bottom: 8px;
+            width: 100px; /* 라벨의 고정된 너비 */
+        }
+        label.lab {
+            display: inline-block;
+            width:  100px;
+            height: 30px;
+        }
+    </style>
 </head>
 <body>
+<h1>회원정보입력폼</h1>
+<form action="#" method="post">
+    <div class="parrent">
+        <div class="form-group">
+            <label class="lab">아이디:</label>
+            <input name="id" type="text">
+            <input name="idChk" type="button" value="중복검사">
+            <br>
+
+            <label class="lab">이름:</label>
+            <input name="name" type="text">
+            <br>
+
+            <label class="lab">생년월일:</label>
+            <input name="bir" type="text">
+            <br>
+
+            <label class="lab">성별:</label>
+            <input name="gender" type="radio">여성
+            <input name="gender" type="radio">남성
+            <br>
+
+            <label class="lab" >휴대폰 번호:</label>
+            <input name="phone" type="tel">
+            <br>
+
+            <label class="lab">이메일:</label>
+            <input name="email" type="email">
+            <input name="idChk" type="button" value="중복검사">
+            <br>
+
+            <label class="lab">우편번호:</label>
+            <input name="zipcode" type="text">
+            <br>
+            <br>
+            <input type="submit" value="제출">
+            <input type="reset" value="초기화">
+        </div>
+    </div>
+</form>
 
 </body>
 </html>
