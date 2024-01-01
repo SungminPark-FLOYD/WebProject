@@ -32,8 +32,8 @@ b1[0].innerHTML, - div, p, span, td, label a h1,h2, b strong em mark
 d2.dinnerText - div, p, span, td, label a h1,h2, b strong em mark
 //요소에 결과값을 출력하기
 a.value = "h1"; - input요소, select / option, textarea
-b1[0].innerHTML = "<a>asd<br>네이버</a>"
-b1[1].innerHTML = "<a>asd<br>네이버</a>"
+b1[0].innerHTML = "<a>asd<br>네이버</a>";
+b1[1].innerText = "<a>asd<br>네이버</a>";
 
 
 <p>hello<span>hi~~</span> <a>안녕하세요</a> </p>

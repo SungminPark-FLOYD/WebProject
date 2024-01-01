@@ -24,7 +24,7 @@ public interface IMemberDao {
     //우편번호 검색
     public abstract List<ZipVo> addrInfo(String zipCode);
     //회원가입
-    public abstract void signUp(List<MemberVo> param);
+    public abstract void signUp(MemberVo param);
 
 
 }

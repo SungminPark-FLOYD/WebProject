@@ -78,7 +78,7 @@ public class IMemberDaoImpl implements IMemberDao{
     }
 
     @Override
-    public void signUp(List<MemberVo> param) {
+    public void signUp(MemberVo param) {
         String sql = " insert into member" +
                 " (mem_id, mem_pass, mem_name, mem_bir, mem_zip, mem_add1, mem_add2, mem_hp, mem_mail) " +
                 " values (?,?,?,?,?,?,?,?,?)";

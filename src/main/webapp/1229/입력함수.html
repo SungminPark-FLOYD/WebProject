@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            border: 1px solid orangered;
+            padding: 10px;
+            margin: 20px;
+        }
+        .box input[type=button]{
+            width: 100px;
+            height: 35px;
+            border-radius: 20px;
+            background: #faf1a4;
+            color: red;
+
+        }
+        .box div{
+            border: 1px dotted orange;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        // function proc1() {}
+        // proc1() = function () {}
+
+        proc1 = () => {
+            //숫자 2개를 입력받기
+            var in1 = window.prompt("수 입력" , "1~100사이정수");
+            var in2 = prompt("1~100사이 정수 입력");
+
+            //연산
+            add = parseInt(in1) + parseInt(in2);
+            sub = in1 - in2;
+            mul = in1*in2;
+            div = in1/in2;
+
+            str = "첫번째 수 " + in1 + "<br>";
+            str += "두 번째 수 " + in2 + "<br>";
+            str += "덧셈 " + add + "<br>";
+            str += "뺄셈 " + sub + "<br>";
+            str += "곱셈 " + mul + "<br>";
+            str += "나눗셈 " + div + "<br>";
+            //출력
+            document.getElementById('result').innerHTML = str;
+
+
+        }
+        proc2 = () => {
+            //숫자 2개를 입력받기
+            su1 = parseInt(prompt("첫번째 수 입력"));
+            su2 = parseInt(prompt("두번째 수 입력"));
+
+            op = prompt("연산자 입력", "+,-,*,/");
+
+            // if(op == "+") res = su1 + su2;
+            // else if(op == "-") res = su1 - su2;
+            // else if(op == "*") res = su1*su2;
+            // else res = su1/su2;
+
+            switch (op) {
+                case "+" :
+                    res = su1 + su2;
+                    break;
+                case "-" :
+                    res = su1 - su2;
+                    break;
+                case "*":
+                    res = su1 * su2;
+                    break;
+                case "/":
+                    res = su1/su2;
+                    break;
+                default :
+                    alert("잘못입력하셨습니다.")
+                    break;
+
+            }
+
+            str = su1 + op + su2 + " = " + res;
+
+            //출력
+            document.getElementById('result2').innerHTML = str;
+        }
+
+        proc3 = () => {
+            num = parseInt(prompt("점수를 입력하세요"));
+
+            switch (true) {
+                case (num >= 90) :
+                    score = "A";
+                    break;
+                case (num >= 80) :
+                    score = "B";
+                    break;
+                case (num >= 70) :
+                    score = "C";
+                    break;
+                case (num >= 60) :
+                    score = "D";
+                    break;
+                case (num < 60):
+                    score = "F";
+                    break;
+            }
+            result = score;
+            //출력
+            document.getElementById('result3').innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+<div class="box">
+    <h4>두수를 입력 하여 사칙연산을 수행</h4>
+<input type="button" value="확인" onclick="proc1()">
+<br><br>
+<div id="result"></div>
+</div>
+
+<br>
+<div class="box">
+    <h4>두수와 연산자를 입력하여 사칙연산 수행</h4>
+    <input type="button" value="확인" onclick="proc2()">
+    <br><br>
+    <div id="result2"></div>
+</div>
+
+<br>
+<div class="box">
+    <h4>점수를 입력하여 학점을 계산</h4>
+    <input type="button" value="확인" onclick="proc3()">
+    <br><br>
+    <div id="result3"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            border : 1px dotted orange;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function print() {
+            //입력받은 id의 값을 가져온다 - id=id인 요소에 접근
+            //둘중에 하나써도 된다
+            //var는 재정의 가능(다른 블럭에서도 사용가능)
+            // let은 재정의 불가(같은 블럭에서만 사용가능)
+            //const는 재정의 업데이트 불가
+            let vid = document.getElementById('id');
+            // var vid = document.querySelector('#id');
+
+            var idValue = vid.value;
+            //처리 한후 처리 결과를 출력한다.
+            var str = "";
+            str += "당신이 입력한 id는 " + idValue + "입니다.";
+
+            // document.write(str);
+            // console.log(str);
+            // alert(str);
+
+            //출력 장소 접근
+            let vres = document.querySelector('#result');
+
+            vres.innerText = str;
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="id" name="id" placeholder="id입력"><br>
+<input type="button" value="확인" onclick="print()">
+
+<br><br>
+<div id="result"></div>
+</body>
+</html>

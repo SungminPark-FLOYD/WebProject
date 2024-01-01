@@ -98,5 +98,27 @@
         <li><a href="./gugudan/구구단.jsp">구구단.jsp </a> </li>
     </ul>
 </div>
+<div class="dd">
+    <h4>1228</h4>
+    <ul>
+        <li><a href="./1228/flex레이아웃.html">flex레이아웃.html</a> </li>
+        <li><a href="./1228/float레이아웃.html">float레이아웃.html</a> </li>
+        <li><a href="./1228/float정렬.html">float정렬.html </a> </li>
+        <li><a href="./1228/table속성.html">table속성.html</a> </li>
+        <li><a href="./1228/레이아웃Position.html">레이아웃Position.html</a> </li>
+        <li><a href="./1228/요소순서zIndex.html">요소순서zIndex.html </a> </li>
+    </ul>
+</div>
+<div class="dd">
+<h4>1228</h4>
+<ul>
+    <li><a href="./1229/jsTest1.html">jsTest1.html</a> </li>
+    <li><a href="./1229/write출력.html">write출력.html</a> </li>
+    <li><a href="./1229/변수범위.html">변수범위.html</a> </li>
+    <li><a href="./1229/외부스크립트.html">외부스크립트.html</a> </li>
+    <li><a href="./1229/입력함수.html">입력함수.html</a> </li>
+</ul>
+</div>
+
 </body>
 </html>
