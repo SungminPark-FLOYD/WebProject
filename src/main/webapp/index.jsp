@@ -95,6 +95,8 @@
         <li><a href="./gugudan/구구단.html">구구단(단입력)</a> </li>
         <li><a href="./SignUp/회원가입1.html">회원가입.html</a> </li>
         <li><a href="./gugudan/구구단.jsp">구구단.jsp </a> </li>
+        <li><a href="./1229Sub/id중복검사.html">id중복검사.html</a> </li>
+        <li><a href="./1229Sub/memberList.jsp">memberList.jsp</a> </li>
     </ul>
 </div>
 <div class="dd">
@@ -109,7 +111,7 @@
     </ul>
 </div>
 <div class="dd">
-<h4>1228</h4>
+<h4>1229</h4>
 <ul>
     <li><a href="./1229/jsTest1.html">jsTest1.html</a> </li>
     <li><a href="./1229/write출력.html">write출력.html</a> </li>
@@ -118,6 +120,14 @@
     <li><a href="./1229/입력함수.html">입력함수.html</a> </li>
 </ul>
 </div>
-
+<div class="dd">
+    <h4>0102</h4>
+    <ul>
+        <li><a href="./0102/가위바위보.html">가위바위보.html</a> </li>
+        <li><a href="./0102/반목문.html">반목문.html</a> </li>
+        <li><a href="./0102/반목연습.html">반복연습.html</a> </li>
+        <li><a href="./0102/배열선언사용.html">배열선언사용.html</a> </li>
+    </ul>
+</div>
 </body>
 </html>

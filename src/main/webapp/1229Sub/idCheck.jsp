@@ -1,13 +1,7 @@
-<%@ page import="java.util.Map" %>
-<%@ page import="java.sql.*" %>
-<%@ page import="java.util.HashMap" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: PC-24
-  Date: 2023-12-29
-  Time: PM 6:10
-  To change this template use File | Settings | File Templates.
---%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Connection"%>
 <%!
     private Connection conn = null;
     private ResultSet rs = null;
@@ -28,29 +22,25 @@
 <head>
     <title>Title</title>
     <style>
-        #id {
-            font-size: 1.2rem;
+    	span {
+    		font-size: 1.2rem;
+            color: red;
+    	}
+    	.id {
+    		font-size: 1.2rem;
             color: blue;
-        }
+    	}
+    	
     </style>
 </head>
 
 <body>
 <%
-//    request.setCharacterEncoding("UTF-8");
-//
-//    String id = request.getParameter("id");
+    request.setCharacterEncoding("UTF-8");
 
-//    Map<String, Object> selectId = selectOne(sql);
+    String id = request.getParameter("id");
 
-//    String str = "";
-//    if(selectId.isEmpty()) {
-//        str = id + "는 사용 불가능 아이디 입니다.";
-//    }
-//    else
-//        str = id + "는 사용 가능 아이디 입니다.";
-%>
-<%
+ 
     String userId = null;
 
     Class.forName(driver);
@@ -60,7 +50,7 @@
     //실행객체
     ps = conn.prepareStatement(sql);
     //실행문에 값 셋팅
-    ps.setString(1, userId);
+    ps.setString(1, id);
 
     //실행
     //쿼리 수행 rs
@@ -68,13 +58,12 @@
 
     if(rs.next()) {
 %>
-//사용 불가능
-<p></p>
+<p><span class="id"><%= id%></span>는 사용 <span>불가능</span>입니다.</p>
 <%
 }
 else {
 %>
-//사용 가능
+<p><span class="id"><%= id%></span>는 사용 <span>가능</span>입니다.</p>
 <%  }
 %>
 

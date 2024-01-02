@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 5px auto;
+    padding: 0;
+    width: 1900px;
+}
+header {
+    background-color: skyblue;
+}
+
+#title:link, #title:visited, #title:hover, #title:active {
+    color: darkgray;
+    text-decoration: none;
+}
+
+header, nav, aside, section#main, footer {
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+}
+nav {
+    background-color: lemonchiffon;
+}
+nav ul {
+
+    border-radius: 10px;
+    list-style-type: none;
+    height: 30px;
+    padding-top: 10px;
+    margin: 20px auto;
+    border-left: none;
+    border-right: none;
+}
+nav li {
+    width: 15%;
+    margin-left: 3%;
+    float: left;
+    text-align: center;
+
+}
+nav a {
+    /*밑줄*/
+    text-decoration: none;
+    text-transform: uppercase;
+    /*글자간격*/
+    letter-spacing: 10px;
+    font-size: 1.3rem;
+}
+nav a:hover {
+    background: yellow;
+    text-decoration: underline;
+}
+nav a:active {
+    font-size: 1.5rem;
+}
+
+aside#left,aside#right,section#main {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+aside#left,aside#right {
+    height: 500px;
+}
+
+nav ul, aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li{
+    display: inline;
+    margin-right: 10px;
+}
+
+aside#left {
+    background-color: coral;
+    width: 20%;
+    float: left;
+}
+aside #left ul {
+    list-style: none;
+    padding: 0;
+}
+.list {
+    margin-left: 20px;
+}
+.list:link    { color: white; text-decoration : none }
+.list:visited { color: white; text-decoration : none }
+.list:hover   { color: white; text-decoration : none }
+.list:active  { color: white; text-decoration : none }
+aside#left ul {
+    border-radius: 10px;
+}
+aside#left li {
+    background-color: darkred;
+    border-radius: 10px;
+    margin-bottom: 3px;
+    height: 50px;
+}
+aside#left a {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    font-size: 25px;
+}
+#main {
+    width: 55%;
+}
+#article1 {
+    margin-left: 5%;
+}
+label {
+    display: inline-block;
+    margin-bottom: 8px;
+    width: 100px; /* 라벨의 고정된 너비 */
+}
+label.lab {
+    display: inline-block;
+    width:  100px;
+    height: 30px;
+}
+aside#right {
+    background-color: coral;
+    width: 20%;
+    float: right;
+}
+
+footer {
+    clear: both;
+    border-radius: 10px;
+    background-color: lightblue;
+}
+.foot {
+    text-align: center;
+    font-style: italic;
+}

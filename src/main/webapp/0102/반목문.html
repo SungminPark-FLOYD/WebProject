@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <style>
+
+    </style>
+    <script>
+        proc1 = () => {
+            let num = 0;
+            for (let i = 1; i <= 10; i++) {
+                num += i;
+            }
+
+            document.getElementById('result1').innerHTML = num;
+        }
+
+        proc2 = () => {
+            //객체 선언
+            mycar = {model : "bmw" , name : "x5" , year : 2010}
+
+            res = "";
+            for(x in mycar) {
+                res += `${mycar[x]} <br>`;
+            }
+
+            document.getElementById('result2').innerHTML = res;
+        }
+    </script>
+</head>
+<body>
+<div class="box">
+    <h4>1~10가지의 합 구하기</h4>
+    <input type="button" value="확인" onclick="proc1()">
+    <br><br>
+    <div id="result1"></div>
+</div>
+<div class="box">
+    <h4>for/in 객체 접근</h4>
+    <h4>객체 {key:value. key:value,... }</h4>
+    <input type="button" value="확인" onclick="proc2()">
+    <br><br>
+    <div id="result2"></div>
+</div>
+</body>
+</html>

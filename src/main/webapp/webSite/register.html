@@ -12,19 +12,25 @@
             text-align: center;
         }
         form {
-
             max-width: 400px;
             margin: 0 auto;
         }
         div.parrent {
-            border: 2px dotted blue;
+            border: 2px solid lightgray;
             box-sizing: border-box;
-            width: 450px;
+            width: 600px;
             height: 500px;
             margin: 0 auto;
 
             position: relative;
 
+        }
+        div#bb {
+            margin: auto;
+        }
+        #bb input {
+            margin-left: 50px;
+            width: 200px;
         }
         .form-group {
             position: absolute;
@@ -40,49 +46,69 @@
         }
         label.lab {
             display: inline-block;
-            width:  100px;
+            margin-left: 50px;
+            width:  200px;
             height: 30px;
+        }
+        h4 {
+            margin: 0;
+            top : 20px;
         }
     </style>
 </head>
 <body>
 <h1>회원정보입력폼</h1>
 <form action="#" method="post">
+    <div>
+        <h4>회원정보입력</h4>
+    </div>
     <div class="parrent">
+
         <div class="form-group">
-            <label class="lab">아이디:</label>
+            <label class="lab">아이디</label>
             <input name="id" type="text">
             <input name="idChk" type="button" value="중복검사">
             <br>
 
-            <label class="lab">이름:</label>
-            <input name="name" type="text">
+            <label class="lab">패스워드</label>
+            <input name="pass" type="password">
             <br>
 
-            <label class="lab">생년월일:</label>
-            <input name="bir" type="text">
+            <label class="lab">패스워드 확인</label>
+            <input name="pass" type="password">
             <br>
 
-            <label class="lab">성별:</label>
-            <input name="gender" type="radio">여성
-            <input name="gender" type="radio">남성
+            <label class="lab">이름</label>
+            <input name="name" type="text" placeholder="홍길동">
             <br>
 
-            <label class="lab" >휴대폰 번호:</label>
-            <input name="phone" type="tel">
+            <label class="lab">휴대폰번호</label>
+            <input name="tel" type="text" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="010-1234-1234">
             <br>
 
-            <label class="lab">이메일:</label>
-            <input name="email" type="email">
-            <input name="idChk" type="button" value="중복검사">
+            <label class="lab">이메일</label>
+            <input name="email" type="email" placeholder="asd123@google.com">
             <br>
 
-            <label class="lab">우편번호:</label>
-            <input name="zipcode" type="text">
+            <label class="lab">생년월일</label>
+            <input name="bir" type="date">
+            <br>
+
+            <label class="lab">홈페이지</label>
+            <input name="page" type="text" placeholder="www.google.com">
+            <br>
+
+            <label class="lab">성별</label>
+            <input name="gender" type="radio">남자
+            <input name="gender" type="radio">여자
+            <br>
+
             <br>
             <br>
+            <div id="bb">
             <input type="submit" value="제출">
             <input type="reset" value="초기화">
+            </div>
         </div>
     </div>
 </form>
