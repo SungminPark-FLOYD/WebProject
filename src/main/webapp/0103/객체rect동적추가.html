@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <script>
+        rect = { };
+
+        function proc1() {
+            rect.name = "kkkk";
+            rect.w = 11;
+            rect.h = 12;
+
+            rect.getArea = function() {
+                return this.w*this.h;
+            }
+
+            printObj('result1');
+        }
+
+        printObj = (out) => {
+            str = `이름 : ${rect.name} <br>`;
+            str += `가로 : ${rect.w}, 세로 ${rect.h} <br> `
+
+            area = rect.getArea();
+
+            str += `면적 : ${area} <br>`
+
+            document.getElementById(out).innerHTML = str;
+        }
+    </script>
+</head>
+<body>
+<div class="box">
+    <h4></h4>
+    <input type="button" value="확인" onclick="proc1()">
+    <br><br>
+    <div id="result1"></div>
+</div>
+</body>
+</html>

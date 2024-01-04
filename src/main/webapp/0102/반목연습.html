@@ -54,7 +54,7 @@
       proc5 = () => {
         str = "";
         for(i = 1; i <= 100; i++) {
-          if((i%2 ==0)&&(i%3 == 0)) str += `${i}`;
+          if((i%2 ==0)&&(i%3 == 0)) str += `${i} `;
         }
 
         document.getElementById('result5').innerHTML = str;
@@ -64,9 +64,11 @@
         str = "";
         let first, second;
 
-        while(first != 0 && second != 0) {
+        while(true) {
            first  = parseInt(prompt("첫번째 수 입력"));
            second = parseInt(prompt("두번째 수 입력"));
+
+          if(first == 0 && second == 0) break;
 
           if(first + second < 100) continue;
 

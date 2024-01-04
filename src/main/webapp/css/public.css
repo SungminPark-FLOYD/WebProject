@@ -19,6 +19,7 @@ pre {
 
 .box input[type=button]{
     border: 1px dotted orangered;
-    color: white;
+    color: brown;
+    background-color: skyblue;
     border-radius: 10px;
 }

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sidebar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            z-index: 1;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: -200px;
+            height: 100%;
+            width: 200px;
+            background-color: #555;
+            padding-top: 60px;
+            transition: left 0.3s;
+            z-index: 2;
+        }
+
+        nav a {
+            display: block;
+            padding: 15px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            margin-left: 0;
+            padding: 20px;
+            transition: margin-left 0.3s;
+        }
+
+        #menuBtn {
+            cursor: pointer;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 3;
+        }
+
+        #menuBtn div {
+            width: 30px;
+            height: 5px;
+            background-color: #fff;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        #menuBtn.active div:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        #menuBtn.active div:nth-child(2) {
+            opacity: 0;
+        }
+
+        #menuBtn.active div:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        @media screen and (max-width: 600px) {
+            nav {
+                width: 100%;
+                left: 0;
+            }
+
+            main {
+                margin-left: 0;
+            }
+
+            #menuBtn {
+                display: block;
+            }
+
+            nav.active {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div id="menuBtn">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <h1>Responsive Sidebar</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</nav>
+
+<main>
+    <h2>Main Content</h2>
+    <p>This is the main content of your webpage.</p>
+</main>
+
+<script>
+    document.getElementById('menuBtn').addEventListener('click', function() {
+        this.classList.toggle('active');
+        document.querySelector('nav').classList.toggle('active');
+    });
+</script>
+</body>
+</html>

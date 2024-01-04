@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <script>
+        now1 = new Date();
+        now2 = new Date(2000);
+        now3 = new Date("2000. 04. 25");
+        now4 = new Date(2000, 3, 25);
+
+        //윈도우에 나타났을때 바로
+        window.onload =  function (){
+            vbox = document.querySelector('.cbox');
+            window.setInterval(function (){
+                now1 = new Date();
+                today = now1.toLocaleString();
+                vbox.innerHTML = today;
+            }, 1000);
+
+        }
+
+        function proc1() {
+            now1 = new Date();
+            now2 = new Date(2000);
+            now3 = new Date("2000. 04. 25");
+            now4 = new Date(2000, 3, 25);
+
+            str = `${now1} <br> ${now2} <br> ${now3} <br> ${now4} <br>`;
+
+            document.getElementById('result1').innerHTML = str;
+
+            a = now1.toLocaleDateString()
+            b = now2.toLocaleDateString()
+            c = now3.toLocaleDateString()
+            d = now4.toLocaleDateString()
+
+            str = `${a} <br> ${b} <br> ${c} <br> ${d} <br>`;
+            document.getElementById('result1').innerHTML = str;
+
+        }
+
+        function proc2() {
+            day = now1.getDay();
+
+            str = "";
+            switch (day) {
+
+                case 0:
+                    str = "일요일";
+                    break;
+                case 1:
+                    str = "월요일";
+                    break;
+                case 2:
+                    str = "화요일";
+                    break;
+                case 3:
+                    str = "수요일";
+                    break;
+                case 4:
+                    str = "목요일";
+                    break;
+                case 5:
+                    str = "금요일";
+                    break;
+                case 6:
+                    str = "토요일";
+                    break;
+                default :
+                    break;
+            }
+
+            res = `오늘 : ${now1.toLocaleString()} <br> 요일 : ${str} 입니다.`
+
+            document.getElementById('result2').innerHTML = res;
+        }
+
+        function proc3() {
+            arr = ["일요일","월요일","화요일","수요일","목요일","금요일","토요일"];
+
+            today = arr[now1.getDay()];
+            str = `오늘 : ${now1.toLocaleString()} <br> ${today} 입니다.`
+            document.getElementById('result3').innerHTML = str;
+
+            date = now1.toLocaleDateString();
+            time = now1.toLocaleTimeString();
+
+            console.log(date + '\n' + time);
+
+        }
+    </script>
+    <style>
+        .cbox{
+            height: 50px;
+            border : 5px inset red;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="cbox"></div>
+<div class="box">
+    <h4>Date</h4>
+    <input type="button" value="Date" onclick="proc1()">
+    <br><br>
+    <div id="result1"></div>
+</div>
+<div class="box">
+    <h4>getDay() : 0(일요일) ~ 6(토요일) 요일구하기</h4>
+    <input type="button" value="Date" onclick="proc2()">
+    <br><br>
+    <div id="result2"></div>
+</div>
+<div class="box">
+    <h4>getDay() : 0(일요일) ~ 6(토요일) 요일구하기<br>
+    배열이용</h4>
+    <input type="button" value="Date" onclick="proc3()">
+    <br><br>
+    <div id="result3"></div>
+</div>
+</body>
+</html>

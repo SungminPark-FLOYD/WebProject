@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <script>
+        function Circle(rad) {
+            this.rad = rad;
+
+            this.getArea = function () {
+                return this.rad * this.rad * Math.PI;
+            }
+        }
+
+        //동적추가
+        Circle.prototype.name = function (name) {
+            this.name = name;
+            return this.name;
+        }
+
+        function proc1() {
+            const  c1 = new Circle(3);
+            vname = "proc1";
+            printObj(c1, 'result1');
+        }
+
+        function printObj(ob, out) {
+            str = `반지름 : ${ob.rad} <br> 이름 : ${ob.name(vname)} <br>
+                    면적 : ${ob.getArea()} <br>`;
+
+            document.getElementById(out).innerHTML = str;
+        }
+
+        function proc2() {
+            const c2 = new Circle(5);
+            vname = "proc2";
+            printObj(c2, 'result2');
+        }
+    </script>
+</head>
+<body>
+<div class="box">
+    <h4>각 객체(c1)에 name()함수 동적 추가</h4>
+    <input type="button" value="확인" onclick="proc1()">
+    <br><br>
+    <div id="result1"></div>
+</div>
+<div class="box">
+    <h4>객체 prototype에 name 함수를 동적 추가<br>
+        모든 객체가 name() 함수를 호출 할 수 있다</h4>
+    <input type="button" value="확인" onclick="proc2()">
+    <br><br>
+    <div id="result2"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <script>
+        class User {
+            //클래스에서 필수
+            constructor(name) {
+                this.name = name;
+            }
+            sayHi() {
+                alert(this.name)
+            }
+        }
+        //alert(typeof User);
+
+        user = new User("korea");
+        console.log(user);
+        user.sayHi();
+
+        function proc1() {
+            user2 = new User("HOME");
+        }
+
+    </script>
+</head>
+<body>
+<div class="box">
+<h4></h4>
+<input type="button" value="확인" onclick="proc1()">
+<br><br>
+<div id="result1"></div>
+</div>
+<div class="box">
+    <h4></h4>
+    <input type="button" value="확인" onclick="proc2()">
+    <br><br>
+    <div id="result2"></div>
+</div>
+</body>
+</html>

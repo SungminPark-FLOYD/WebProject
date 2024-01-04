@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <script>
+        //객체 선언
+        rect = {
+            w : 10,
+            h : 13,
+            getArea() {
+                return this.w * this.h;
+            },
+            getCir() {
+                return (this.w + this.h)*2;
+            }
+            // getArea : function () {
+            //
+            // },
+            // getCir : function () {
+            //
+            // }
+        }
+        printObj = (out) => {
+            str = `이름 : ${rect.name} <br>`;
+            str += `가로 : ${rect.w}, 세로 ${rect.h} <br> `
+
+            area = rect.getArea();
+            cir = rect.getCir();
+
+            str += `면적 : ${area}, 둘레 : ${cir} <br>`
+
+            document.getElementById(out).innerHTML = str;
+        }
+        proc1 = () => {
+            rect.name = "네모";
+            printObj('result1');
+        }
+        proc2 = () => {
+            rect.w = parseInt(prompt("가로입력"));
+            rect.h = parseInt(prompt("세로입력"));
+
+            rect.name = prompt("이름입력");
+            printObj('result2');
+        }
+
+
+    </script>
+</head>
+<body>
+<div class="box">
+    <h4></h4>
+    <input type="button" value="확인" onclick="proc1()">
+    <br><br>
+    <div id="result1"></div>
+</div>
+<div class="box">
+    <h4></h4>
+    <input type="button" value="확인" onclick="proc2()">
+    <br><br>
+    <div id="result2"></div>
+</div>
+</body>
+</html>

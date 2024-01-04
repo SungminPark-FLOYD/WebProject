@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <script>
+        function proc1() {
+            arr = [];
+            while(true) {
+                //입력
+                item = prompt("입력");
+                if(item != null) item = item.trim();
+                if(item == null || item == "") break;
+                //배열에 저장
+                arr.push(item);
+            }
+            str = `추가된 배열 : ${arr} <br>`;
+            document.getElementById('result1').innerHTML = str;
+        }
+        function proc2() {
+            arr = [];
+
+            while(true) {
+                item = prompt("정수 5개 입력");
+
+                if(arr.indexOf(item) < 0) {
+                    arr.push(item);
+                }
+
+                if(arr.length >= 5) break;
+
+            }
+            str = `추가된 배열 : ${arr} <br>`;
+            document.getElementById('result2').innerHTML = str;
+
+        }
+    </script>
+</head>
+<body>
+<div class="box">
+    <h4>prompt()를 이용해여 이름을 계속 입력받아 배열에 저장하고<br>
+    출력하는 프로그램 작성<br> 입력의 마지막은 공백문자를 입력하거나 취소 버튼을 눌러서 종료</h4>
+    <input type="button" value="배열문제" onclick="proc1()">
+    <br><br>
+    <div id="result1"></div>
+</div>
+<div class="box">
+<h4>서로 중복되지 않은 정수 5개를 입력 받아 출력하는 프로그램을
+    작성하시오</h4>
+<input type="button" value="배열문제" onclick="proc2()">
+<br><br>
+<div id="result2"></div>
+</div>
+</body>
+</html>

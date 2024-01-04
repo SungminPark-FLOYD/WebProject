@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <script>
+        function Circle(rad) {
+            this.rad = rad;
+
+            this.getArea = function () {
+                return this.rad * this.rad * Math.PI;
+            }
+        }
+
+        function proc1() {
+            const c1 = new Circle(3);
+
+            //name()함수 동적 추가
+            c1.name = function () {
+                this.name = "홍길동";
+                return this.name;
+            }
+
+            str = `이름 : ${c1.name()} <br> 반지름 : ${c1.rad} <br> 넓이 : ${c1.getArea()}`;
+            document.getElementById('result1').innerHTML = str;
+
+            const c2 = new Circle(5);
+            area = c2.getArea();
+            //name()함수 동적 추가
+            c2.name = function () {
+                this.name = "c2";
+                return this.name;
+            }
+            str = `이름 : ${c2.name()} <br> 반지름 : ${c2.rad} <br> 넓이 : ${area}`;
+            document.getElementById('result2').innerHTML = str;
+        }
+    </script>
+</head>
+<body>
+<div class="box">
+    <h4>각 객체(c1)에 name()함수 동적 추가</h4>
+    <input type="button" value="확인" onclick="proc1()">
+    <br><br>
+    <div id="result1"></div>
+</div>
+<div class="box">
+    <h4>객체 prototype에 name함수를 동적 추가<br>
+    모든 객체가 name() 함수를 호출 할 수 있다</h4>
+    <input type="button" value="확인" onclick="proc2()">
+    <br><br>
+    <div id="result2"></div>
+</div>
+</body>
+</html>

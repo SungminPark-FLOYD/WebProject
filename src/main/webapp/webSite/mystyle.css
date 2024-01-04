@@ -3,6 +3,7 @@ body {
     margin: 5px auto;
     padding: 0;
     width: 1900px;
+
 }
 header {
     background-color: skyblue;
@@ -105,9 +106,10 @@ aside#left a {
 }
 #main {
     width: 55%;
+
 }
 #article1 {
-    margin-left: 5%;
+    margin: 5px auto;
 }
 label {
     display: inline-block;
