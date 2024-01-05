@@ -53,7 +53,9 @@
         }
         button {
 
-
+        .title a {
+            text-decoration: none black solid;
+        }
 
         }
     </style>

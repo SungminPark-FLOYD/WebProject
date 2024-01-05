@@ -22,10 +22,12 @@
             arr = [];
 
             while(true) {
-                item = prompt("정수 5개 입력");
+                item = prompt("정수 5개 입력").trim();
 
-                if(arr.indexOf(item) < 0) {
-                    arr.push(item);
+                if(item !== "") {
+                    if(arr.indexOf(item) < 0) {
+                        arr.push(item);
+                    }
                 }
 
                 if(arr.length >= 5) break;

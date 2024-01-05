@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <script>
+        rand = Math.floor(Math.random() * 101);
+        ins = "";
+        count = 0;
+        function proc1() {
+
+
+            // input = document.querySelector("#num").value.trim();
+            input = document.getElementById("num").value.trim();
+            ins += input + " ";
+            count++;
+
+            str = "";
+            if(rand == input) str = `${ins}  <br>  ${count}  정답!!  <br>`;
+            else if(rand > input) str = "더 큰수를 입력하세요";
+            else str = "더 작은수를 입력하세요";
+
+            document.getElementById('result1').innerHTML = str;
+
+        }
+
+        function proc2() {
+            rcp = ["가위", "바위", "보"];
+
+            n = Math.floor(Math.random() * rcp.length);
+
+            com = rcp[n];
+
+            user = prompt("가위바위보 입력", "가위");
+
+            str = `com : ${com} <br> user : ${user} <br>`;
+            if(com == user) str += "비겼습니다."
+            else if(com == "가위") {
+                if(user == "바위") str += "사용자 승";
+                else if(user == "보") str += "컴퓨터 승";
+            }
+            else if(com == "바위") {
+                if(user == "보") str += "사용자 승";
+                else if(user == "가위") str += "컴퓨터 승";
+            }
+            else if(com == "보") {
+                if(user == "가위") str += "사용자 승";
+                else if(user == "바위") str += "컴퓨터 승";
+            }
+            document.getElementById('result2').innerHTML = str;
+        }
+
+        function proc3() {
+            arr = [];
+            while(true) {
+                lotto = Math.floor(Math.random() * 45+1);
+
+                if(arr.indexOf(lotto) == -1) {
+                    arr.push(lotto);
+                }
+                if(arr.length == 6) break;
+            }
+
+            //정렬
+            arr.sort(function(a, b)  {
+                if(a > b) return 1;
+                if(a === b) return 0;
+                if(a < b) return -1;
+            });
+
+            document.getElementById('result3').innerHTML = arr;
+        }
+    </script>
+</head>
+<body>
+<div class="box">
+    <h4>1부터 100사이 숫자 입력</h4>
+    수 입력 : <input type="text" id="num">
+    <input type="button" value="추측" onclick="proc1()">
+    <br><br>
+    <div id="result1"></div>
+</div>
+<div class="box">
+    <h4>가위바위보</h4>
+    <input type="button" value="추측" onclick="proc2()">
+    <br><br>
+    <div id="result2"></div>
+</div>
+<div class="box">
+    <h4>로또</h4>
+    <input type="button" value="뽑기" onclick="proc3()">
+    <br><br>
+    <div id="result3"></div>
+</div>
+</body>
+</html>
